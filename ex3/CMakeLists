@@ -1,0 +1,2 @@
+﻿start: main.c menu.c logic.c ex3.h
+	gcc -o start main.c menu.c logic.c ex3.h

@@ -1,0 +1,12 @@
+ArrayList: main.c menu.c log.c ex4.h
+	gcc -o arraylist main.c menu.c log.c ex4.h
+StaticArray:
+	gcc -c log.c
+	ar r libarr.a *.o
+	rm *.o
+	gcc -o project main.c -L../logic -larr -lm
+DynamicArray: main.c menu.c log.c ex4.h
+	gcc -c -fPIC log.c
+	gcc -shared -o libarr.so *.o
+	rm *.o
+	gcc -o project main.c -L../logic -larr -Wl,-rpath,../logic/ -lm
