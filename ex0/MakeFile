@@ -1,0 +1,2 @@
+start: main.c func.c ex0.h
+	gcc -o start main.c func.c ex0.h 

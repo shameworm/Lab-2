@@ -1,0 +1,2 @@
+run: main.c start.c factorial.c ex1.h
+	gcc -o run main.c start.c factorial.c ex1.h -lm
